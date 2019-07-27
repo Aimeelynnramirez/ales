@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" href="https://i.imgur.com/OcaHPff.png" type="image/gif" sizes="16x16">
+<body>
+
+ <h1> Model Language LPL </h1>
+ <h2> Index Notation in Mathematics and Modelling
+  <br> Language LPL: Theory and Exercises </h2>
+<p>Click the button to get the content and display it in the web page.</p>
+
+<button onclick="showContent()">Evaluating Numbers</button>
+
+<template>
+  <h1> Model Language LPL </h1>
+ <h2>Abstract</h2>
+ <p>This paper explains indexing notation in mathematics and its implementation
+in the modeling language LPL. Indexing is one of the most fundamental concept in
+mathematical notation. It is extremely powerful and allows the modeler to concisely
+formulate a complex mathematical model. A certain number of exercises are given
+and implemented in LPL to test the concepts</p>
+<iframe src="Ramirez_Aimee_Evaluating_Numbers.pdf" height="600" width="600"></iframe>
+<!-- <object data="./Ramirez_Aimee_Evaluating_Numbers.pdf" type="application/pdf"  height="600" width="600">
+  <embed src="./Ramirez_Aimee_Evaluating_Numbers.pdf" type="application/pdf"  height="600" width="600" /> -->
+</object>
+
+</template>
+
+<script>
+function showContent() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+
+
+  
+</body>
+</html>
