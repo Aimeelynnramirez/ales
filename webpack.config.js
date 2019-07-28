@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TreatPlugin = require('treat/webpack-plugin');
 module.exports = {
   entry:{ 
-  main: './src/index.js',
+  main: './../index.js',
 },
 output: {
   path: __dirname + '/build',
@@ -50,7 +50,7 @@ devServer: {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: "./../index.html",
       filename: "./index.html"
     }),
     new TreatPlugin({

@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "max number no RNG",
   "private": true,
-  "homepage":"https://aimeelynnramirez.github.io/evaluating-number",
-  "repository": "git@github.com:Aimeelynnramirez/evaluating-number.git",
+  "homepage": "https://aimeelynnramirez.github.io/evaluating-number",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Aimeelynnramirez/evaluating-number.git"
+  },
   "author": "Aimee Lynn <aimeelynnramirez@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -26,5 +29,16 @@
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
     "build": "webpack"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Aimeelynnramirez/evaluating-number/issues"
+  },
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "terser": "^4.1.2"
+  },
+  "keywords": []
 }
