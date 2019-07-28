@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "max number no RNG",
   "private": true,
+  "homepage":"https://aimeelynnramirez.github.io/evaluating-number",
   "repository": "git@github.com:Aimeelynnramirez/evaluating-number.git",
   "author": "Aimee Lynn <aimeelynnramirez@gmail.com>",
   "license": "MIT",
