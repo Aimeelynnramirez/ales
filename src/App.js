@@ -52,11 +52,11 @@ class App extends Component {
     return (
       <div>
         
-     <div>
+     <div className="pink" >
             <span className="header-item">WELCOME</span>
         </div> 
         
-        <TextList textItemAll={this.state.items} className="pink"  
+        <TextList textItemAll={this.state.items}  
         
           /* this === App */
           clickHandler={this.myClickHandler.bind(this)}
@@ -68,4 +68,3 @@ class App extends Component {
 }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
