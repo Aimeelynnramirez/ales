@@ -33,21 +33,11 @@ devServer: {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // only enable hot in development
-              hmr: process.env.NODE_ENV === 'development',
-              // if hmr does not work, this is a forceful method.
-              reloadAll: true,
-            },
-          },
-          'css-loader',
-        ],
-      },
-    ],
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+      }
+    ]
   },
+  
   plugins: [
     new HtmlWebPackPlugin({
       template: "./../index.html",
