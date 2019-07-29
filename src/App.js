@@ -8,7 +8,7 @@ const url ={
   
 }
 const showImages = {
-  images:['https://cdn.pixabay.com/photo/2018/03/16/12/34/wall-3231116_960_720.jpg']
+  images:['https://upload.wikimedia.org/wikipedia/commons/0/0b/Italian_traffic_signs_-_delineatore_di_curva_d.svg']
 }
 class App extends Component {
   constructor() {
@@ -49,7 +49,7 @@ class App extends Component {
  
     }]
     this.setState({
-      pic: data[0],
+      pic:data[0],
       items: data
     });
   }
@@ -71,7 +71,7 @@ class App extends Component {
    const picture =this.state.pic.banner;
     return (
       <div style= {{margin:11, backgroundColor:'#000000', color:'#ffffff'}}>
-      <img src={picture} alt="banner"style= {{width:'100%', maxWidth:1000}}/>
+      <img src={picture} alt="banner"style= {{width:'100%', maxWidth:2000, height:'100%', maxHeight:300}}/>
 
      <div className="pink" style= {{ backgroundColor:'teal', color:'#ffffff'}}>
       <span className="header-item">WELCOME</span>
