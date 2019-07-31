@@ -1,7 +1,5 @@
-.header-item{
-    background-color:'blue';
-    color:'blue'
-}
-.pink {
-    color: #5C9210;
+button{
+    background:gray;
+    color:black;
+    width:10rem;
 }

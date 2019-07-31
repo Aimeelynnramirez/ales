@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import TextList from './Text/TextList.js';
+import ShopList from './Shop/ShopItem.js';
 
 
 const url ={
   site:[ 'https://www.billboard.com/articles/columns/rock/8523761/meg-dia-frampton-interview-new-album-happysad', 'https://www.stevienicksofficial.com/','http://www.michellebranch.com/','http://www.sevenlions.com/']
   
 }
+
 const showImages = {
   images:['https://upload.wikimedia.org/wikipedia/commons/0/0b/Italian_traffic_signs_-_delineatore_di_curva_d.svg']
 }
@@ -16,51 +18,94 @@ class App extends Component {
     this.state = {
       items: [],
       pic:[],
+      itemsData:[],
+      bags:[],
+      bagData:[],
       reload:true,
       checked: false
     }
     this.sendForm = this.sendForm.bind(this);
+    this.myClicker =this.myClicker.bind(this);
+    this.myClickHandler= this.myClickHandler.bind(this);
   }
 
   componentDidMount() {
-    const data = [{
-       text: '1. Meg and Dia.',
-       urlLink:url.site[0],
-       key: 1,
-       banner:showImages.images[0],
-       sn:"Meg & Dia is an American rock band formed in 2004."
-     }, {
-       text: '2. Stevie Nicks.',
-       key: 2,
-       urlLink:url.site[1],
-       sn:"Stephanie Lynn Nicks (born May 26, 1948) is an American singer and songwriter."
-     }, {
-       text: '3. Michelle Branch.',
-       urlLink:url.site[2],
-       key: 3,
-       sn:"Michelle Jacquet DeSevren Branch (born July 2, 1983) is an American singer, songwriter, and actress."
-  
-     },
-     {
-      text: '4. Seven Lions.',
-      urlLink:url.site[3],
-      key: 4,
-      sn:"Jeff Montalvo (born March 31, 1987), known professionally as Seven Lions, is an American DJ, record producer, instrumentalist and remixer ."
- 
-    }]
-    this.setState({
-      pic:data[0],
-      items: data
-    });
+    const data = [{ id:0,
+      shop:"pink",
+      key: 0,
+      sn:'handbag of pink',
+      urlLink: `https://i.imgur.com/vJFn35u.png`
+
+    },{
+    id:1,
+    shop: 'brown',
+    key:1,
+    sn:'handbag of brown',
+    urlLink:'https://i.imgur.com/xfZGoNk.png'
+
   }
-  myClickHandler(selectedItem) {
-    console.log('this list item was clicked', selectedItem);
+  ,{
+    id:2,
+    shop: 'green',
+    key:2,
+    sn:'handbag of green',
+    urlLink:'https://i.imgur.com/oES8E3u.png'
+
+  }]    
+    const bagItems = [{
+        id:0,
+        shop:"pink",
+        key: 0,
+        sn:'handbag of pink',
+        urlLink: `https://i.imgur.com/vJFn35u.png`
+
+      },{
+      id:1,
+      shop: 'brown',
+      key:1,
+      sn:'handbag of brown',
+      urlLink:'https://i.imgur.com/xfZGoNk.png'
+
+    }
+    ,{
+      id:2,
+      shop: 'green',
+      key:2,
+      sn:'handbag of green',
+      urlLink:'https://i.imgur.com/oES8E3u.png'
+
+    }]
+   
+    this.setState({
+      bagData:bagItems,
+      items: data,
+    });   
+  }
+
+  myClickHandler(selectedItem, i) { 
     const items = this.state.items;
+
     const newItems = items.filter(item => {
       return item.key !== selectedItem.key;
     });
     this.setState({
-      items: newItems
+      items: newItems,
+      itemsData:selectedItem.urlLink
+
+    })
+  }
+  myClicker(selectedBag) {
+    const bagData = this.state.bagData;
+
+    const newBagItems = bagData.filter(bag => {
+      console.log("bag", selectedBag.shop)
+      return bag.key !== selectedBag.key 
+      //now to have if or that 
+    });
+
+    this.setState({
+      bagData:newBagItems,
+      bagPic:selectedBag.urlLink
     })
   }
   sendForm() {
@@ -68,19 +113,29 @@ class App extends Component {
     this.setState({ reload: !this.state.reload});
   }
   render() {
-   const picture =this.state.pic.banner;
+    const picture = this.state.bagPic
+  //const picture2= this.state.itemsData
     return (
-      <div style= {{margin:11, backgroundColor:'#000000', color:'#ffffff'}}>
-      <img src={picture} alt="banner"style= {{width:'100%', maxWidth:2000, height:'100%', maxHeight:300}}/>
-
-     <div className="pink" style= {{ backgroundColor:'teal', color:'#ffffff'}}>
-      <span className="header-item">WELCOME</span>
-        </div> 
-        <TextList textItemAll={this.state.items}
-          /* this === App */
-          clickHandler={this.myClickHandler.bind(this)} 
+       <div className="text-item">
+      <h1 className="header-item">Welcome</h1>
+    
+        <div>
+        <p className="image"> 
+       Click List to View On Screen in Data.
+       </p>
+      <ShopList shopItemAll={this.state.bagData}
+        clickHandler={this.myClicker} 
+        />  
+       <br/>
+       <img src={picture}/>
+         </div> 
+  
+      {/*   <TextList  textItemAll={this.state.items} 
+          className="text-item"  clickHandler={this.myClickHandler} 
         />
-         <button type="button" onClick={this.sendForm} style= {{ backgroundColor:'teal', color:'#ffffff'}}>
+          <br/>
+          <img src={picture2}/> */}
+         <button type="button" onClick={this.sendForm} >
         {this.state.reload ? 'Reload.' : 'Pending...'}
         </button>
       </div>

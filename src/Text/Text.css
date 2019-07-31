@@ -1,0 +1,43 @@
+
+h1{
+  color:#000;
+  font-family: 'Crimson Pro', serif;
+  font-size:3rem;
+}
+hr{
+  color:black;
+}
+span {
+  z-index: auto;
+  color:black;
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  width: 50%;
+}
+span:hover {
+  color:purple;
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  font-weight:bold;
+  font-variant: small-caps;
+  font-size: 20px;
+  width: 50%;
+
+}
+img{
+  z-index:0;
+  width: 100%;
+  color: #ffffff;
+  max-width: 250px;
+  height:350px;
+  background-color: teal;
+}
+/* example of z indexing */
+img:hover{
+  background-color:palevioletred;
+}
+img {
+  background-color:#cfecfe;
+  opacity: 0.8;
+  z-index:2;
+}
