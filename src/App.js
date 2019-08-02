@@ -3,7 +3,7 @@ import './App.css';
 import TextList from './Text/TextList.js';
 import ShopList from './Shop/ShopItem.js';
 
-import placeholder from './placeholder.jpg';
+//import placeholder from './placeholder.jpg';
 
 
 class App extends Component {
@@ -89,10 +89,10 @@ class App extends Component {
       urlLink:'https://i.imgur.com/MolCyZ2.png'
     }
   ]
-    const url ={
+    /* const url ={
       site:[ 'https://www.billboard.com/articles/columns/rock/8523761/meg-dia-frampton-interview-new-album-happysad', 'https://www.stevienicksofficial.com/','http://www.michellebranch.com/','http://www.sevenlions.com/']
       
-    }
+    } */
     this.setState({
       bagData:bagItems,
       items: data,

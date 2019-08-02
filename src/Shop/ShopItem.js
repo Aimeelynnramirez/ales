@@ -1,5 +1,5 @@
 import React from "react";
-import './../App.css';
+//import './../App.css';
 
 // import the Shop items component
 import ShopItem from './shop/shopListItem.js';

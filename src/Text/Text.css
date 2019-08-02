@@ -15,7 +15,7 @@ span {
   width: 50%;
 }
 span:hover {
-  color:purple;
+  color:rgb(146, 10, 10);
   position: relative;
   font-family: 'Roboto Mono', monospace;
   font-weight:bold;
