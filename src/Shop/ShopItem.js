@@ -1,7 +1,7 @@
 import React from "react";
 import './../App.css';
 
-// import the Text items component
+// import the Shop items component
 import ShopItem from './shop/shopListItem.js';
 const list ="Photos:"
 /* const  url = ['https://i.imgur.com/lGypddl.png','https://i.imgur.com/xfZGoNk.png']

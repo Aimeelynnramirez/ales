@@ -1,5 +1,5 @@
 import React from "react";
-import  classes from'./Text.css';
+import './Text.css';
 // import the Text items component
 import TextItem from './text/textListItem.js';
 
@@ -14,9 +14,7 @@ function TextList(props) {
       Check out: {textItem.sn}
        <br/>
        <TextItem src={textItem.url} />
-
-{/*        {textItem.text}
- */}       <br/>
+      <br/>
   
          </span>
         </span>

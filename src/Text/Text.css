@@ -28,16 +28,15 @@ img{
   z-index:0;
   width: 100%;
   color: #ffffff;
-  max-width: 250px;
+  max-width: 255px;
   height:350px;
-  background-color: teal;
 }
 /* example of z indexing */
-img:hover{
+/* img:hover{
   background-color:palevioletred;
-}
+} */
 img {
-  background-image:url("https://i.imgur.com/oES8E3u.png");
+  background-color:rgb(230, 230, 230);
   opacity: 0.8;
   z-index:2;
 }

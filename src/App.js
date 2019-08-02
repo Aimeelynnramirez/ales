@@ -145,7 +145,8 @@ class App extends Component {
             box: boxes, 
             imageApi:boxes[0].imageLink,
             imageApi1:boxes[1].imageLink,
-            imageApi2:boxes[2].imageLink
+            imageApi2:boxes[2].imageLink,
+            imageApi3:boxes[3].imageLink,
            });
           return boxes;
       })
@@ -155,12 +156,13 @@ class App extends Component {
     this.setState({reload: !this.state.reload})
   }
   addDefaultSrc(ev){
-    ev.target.src = 'https://i.imgur.com/jSX2Mse.png'
+    ev.target.src = 'https://i.imgur.com/ONxka1P.png'
   }
   
   render() {
     const getImageApi1 = this.state.imageApi1
     const getImageApi2 = this.state.imageApi2
+    const getImageApi3 = this.state.imageApi3
     const getImageApi = this.state.imageApi
     const box =  this.state.box
     const picture = this.state.bagPic
@@ -169,7 +171,7 @@ class App extends Component {
      const pictureBelow = this.state.itemsData
     return (
      <div className="App">
-      <h1 className="header-item">Welcome</h1>
+      <h1 className="header-item">Welcome.</h1>
       This is length of fetched API data: 
          {box.length}
          {/* refactor this. */}
@@ -179,11 +181,18 @@ class App extends Component {
          src={getImageApi}/>
          <img src={getImageApi1}/>
          <img src={getImageApi2}/>
+         <img src={getImageApi3}/>
+
          <br/>
+       
          <button type="button" onClick={this.getImageFromAPI} >
         {this.state.box ? 'View Images.' : 'Pending...'}
         </button>
-      
+        <br/>
+        <button type="button" onClick={this.sendForm} >
+        {this.state.reload ? 'Hide.' : 'Pending...'}
+        </button>
+        <br/>
         <p className="image"> 
        Click List to View On Screen in Data.
        </p>
@@ -197,19 +206,20 @@ class App extends Component {
         </button>
        <br/>
        <br/>
-       <div className="Apple" style={{ paddingLeft:'15%'}}>
-
-      Articles: {names}
-           <br/>
-         <p>{description}</p>
-         <img onError={this.addDefaultSrc} src={pictureBelow} />
-
-        <TextList  textItemAll={this.state.items} 
+       <div className="Apple">
+       <TextList  textItemAll={this.state.items} 
           className="text-item"  clickHandler={this.myClickHandler} 
         /><br/>
       <button type="button" onClick={this.sendForm} >
         {this.state.reload ? 'Back.' : 'Pending...'}
         </button>
+        <br/>
+        Articles: {names}
+        <br/>
+         <p>{description}</p>
+         <img onError={this.addDefaultSrc} src={pictureBelow} />
+
+      
         </div>
       </div>
     );
