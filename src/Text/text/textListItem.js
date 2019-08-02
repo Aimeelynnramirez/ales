@@ -6,19 +6,17 @@ class TextItem extends React.Component {
         super(props);
         this.state = {
          text: this.props.text,
-          url: this.props.url,
-          sn: this.props.sn,
+          url: this.props.url
         }
     }
     render() {
-    const text ="Click on Group of in Grid";
+    const text ="View Details";
+   
     return (
         <span className="text-container">
-    <br/>
-    <span className="text-item-value pink" style={{color:'teal', textAlign:'center'}}>
-    <br/>
+    <span className="text-item-value pink" style={{color:'teal'}}>
                             {text}
-       <br/>
+                         
        </span>
         </span>
    );

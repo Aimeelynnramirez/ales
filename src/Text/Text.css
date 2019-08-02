@@ -37,7 +37,7 @@ img:hover{
   background-color:palevioletred;
 }
 img {
-  background-color:#cfecfe;
+  background-image:url("https://i.imgur.com/oES8E3u.png");
   opacity: 0.8;
   z-index:2;
 }

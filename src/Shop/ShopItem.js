@@ -3,7 +3,7 @@ import './../App.css';
 
 // import the Text items component
 import ShopItem from './shop/shopListItem.js';
-const list ="List:"
+const list ="Photos:"
 /* const  url = ['https://i.imgur.com/lGypddl.png','https://i.imgur.com/xfZGoNk.png']
  */
 function ShopList(props) {
