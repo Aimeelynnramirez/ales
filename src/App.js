@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TextList from './Text/TextList.js';
 import ShopList from './Shop/ShopItem.js';
+import { get } from 'http';
 
 //import placeholder from './placeholder.jpg';
 
@@ -147,6 +148,8 @@ componentWillUpdate(selectedBox) {
             imageApi1:boxes[1].imageLink,
             imageApi2:boxes[2].imageLink,
             imageApi3:boxes[3].imageLink,
+            imageApi4:boxes[4].imageLink,
+            imageApi5:boxes[5].imageLink,
            });
           return boxes;
       })
@@ -160,11 +163,13 @@ componentWillUpdate(selectedBox) {
   }
   
   render() {
+    const getImageApi = this.state.imageApi
     const getImageApi1 = this.state.imageApi1
     const getImageApi2 = this.state.imageApi2
     const getImageApi3 = this.state.imageApi3
-    const getImageApi = this.state.imageApi
-    const getImagesInBox = [getImageApi, getImageApi1, getImageApi2, getImageApi3];
+    const getImageApi4 = this.state.imageApi1
+    const getImageApi5 = this.state.imageApi2
+    const getImagesInBox = [getImageApi, getImageApi1, getImageApi2, getImageApi3, getImageApi4, getImageApi5];
     //this calls the length.
    // const box =  this.state.box
     const picture = this.state.bagPic
