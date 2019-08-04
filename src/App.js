@@ -105,7 +105,7 @@ class App extends Component {
     const newItems = items.filter(item => {
       // sn is screenname 
       // text is description
-      console.log("item", selectedItem.url);
+     //console.log("item", selectedItem.url);
       return item.key !== selectedItem.key;
     });
     this.setState({
@@ -121,7 +121,7 @@ class App extends Component {
     const bagData = this.state.bagData;
 
     const newBagItems = bagData.filter(bag => {
-      console.log("bag", selectedBag.shop)
+      //console.log("bag", selectedBag.shop)
       return bag.key !== selectedBag.key 
     });
 
@@ -140,7 +140,7 @@ componentWillUpdate(selectedBox) {
           this.setState({box:res.products})
           const boxes = this.state.box;
           boxes !== selectedBox;
-          console.log("this is api", boxes);
+         // console.log("this is api", boxes);
           this.setState({ 
             box: boxes, 
             imageApi:boxes[0].imageLink,
@@ -164,17 +164,17 @@ componentWillUpdate(selectedBox) {
     const getImageApi2 = this.state.imageApi2
     const getImageApi3 = this.state.imageApi3
     const getImageApi = this.state.imageApi
-
-    const getImagesInBox = [ getImageApi, getImageApi1, getImageApi2, getImageApi3];
-
-    const box =  this.state.box
+    const getImagesInBox = [getImageApi, getImageApi1, getImageApi2, getImageApi3];
+    //this calls the length.
+   // const box =  this.state.box
     const picture = this.state.bagPic
     const description = this.state.itemsDescription
      const names = this.state.itemsSn
      const pictureBelow = this.state.itemsData
     return (
      <div className="App">
-      <h1 className="App-Item">Welcome.
+      <h1 className="App-Item">
+        Welcome.
       </h1>
 
 <br/>
