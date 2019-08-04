@@ -14,7 +14,7 @@ class TextItem extends React.Component {
    
     return (
         <span className="text-container">
-    <span className="text-item-value pink" style={{color:'teal'}}>
+    <span className="text-item-value pink" style={{color:'grey'}}>
                             {text}
                          
        </span>

@@ -1,31 +1,24 @@
 
-h1{
-  color:#000;
-  font-family: 'Crimson Pro', serif;
-  font-size:3rem;
-}
 hr{
   color:black;
 }
 span {
-  z-index: auto;
+  z-index:0;
   color:black;
   position: relative;
   font-family: 'Roboto Mono', monospace;
   width: 50%;
 }
 span:hover {
-  color:rgb(146, 10, 10);
+  color:#6772e5;
   position: relative;
   font-family: 'Roboto Mono', monospace;
   font-weight:bold;
-  font-variant: small-caps;
-  font-size: 20px;
+  font-size: 1rem;
   width: 50%;
 
 }
 img{
-  z-index:0;
   width: 100%;
   color: #ffffff;
   max-width: 255px;
@@ -38,5 +31,4 @@ img{
 img {
   background-color:rgb(230, 230, 230);
   opacity: 0.8;
-  z-index:2;
 }

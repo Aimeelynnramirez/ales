@@ -6,7 +6,7 @@ import TextItem from './text/textListItem.js';
 
 function TextList(props) {
   return (
-    <div style= {{margin:11}}>
+    <div style= {{margin:10, backgroundColor:'white'}}>
       {props.textItemAll.map((textItem, text) => {
         return <span onClick={() => props.clickHandler(textItem)} key={text}>  
         <span className="text-item">

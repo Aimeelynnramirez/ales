@@ -21,7 +21,7 @@ class App extends Component {
       reload:true,
       checked: false
     }
-    this.getImageFromAPI = this.getImageFromAPI.bind(this);
+   // this.getImageFromAPI = this.getImageFromAPI.bind(this);
     this.sendForm = this.sendForm.bind(this);
     this.myClicker =this.myClicker.bind(this);
     this.myClickHandler= this.myClickHandler.bind(this);
@@ -130,7 +130,7 @@ class App extends Component {
       bagPic:selectedBag.urlLink
     })
   }
-  getImageFromAPI(selectedBox) {
+componentWillUpdate(selectedBox) {
      fetch('https://aim-application.herokuapp.com/products')
       .then(res => res.json())
       .then(res => {
@@ -164,6 +164,9 @@ class App extends Component {
     const getImageApi2 = this.state.imageApi2
     const getImageApi3 = this.state.imageApi3
     const getImageApi = this.state.imageApi
+
+    const getImagesInBox = [ getImageApi, getImageApi1, getImageApi2, getImageApi3];
+
     const box =  this.state.box
     const picture = this.state.bagPic
     const description = this.state.itemsDescription
@@ -171,27 +174,40 @@ class App extends Component {
      const pictureBelow = this.state.itemsData
     return (
      <div className="App">
-      <h1 className="header-item">Welcome.</h1>
-      This is length of fetched API data: 
-         {box.length}
+      <h1 className="App-Item">Welcome.
+      </h1>
+
+<br/>
+<br/>
          {/* refactor this. */}
          <br/>
          <img 
          onError={this.addDefaultSrc} 
-         src={getImageApi}/>
-         <img src={getImageApi1}/>
-         <img src={getImageApi2}/>
-         <img src={getImageApi3}/>
-
+         src={getImagesInBox[0]}/>
+         <img 
+          onError={this.addDefaultSrc}
+          src={getImagesInBox[1]}/>
+          <img 
+          onError={this.addDefaultSrc}
+          src={getImagesInBox[2]}/>
+          <img 
+           onError={this.addDefaultSrc} 
+           src={getImagesInBox[3]}/>
+          <img 
+           onError={this.addDefaultSrc} 
+           src={getImagesInBox[4]}/>  
+            <img 
+           onError={this.addDefaultSrc} 
+           src={getImagesInBox[5]}/> 
          <br/>
        
-         <button type="button" onClick={this.getImageFromAPI} >
+       {/*   <button type="button" onClick={this.getImageFromAPI} >
         {this.state.box ? 'View Images.' : 'Pending...'}
         </button>
         <br/>
         <button type="button" onClick={this.sendForm} >
         {this.state.reload ? 'Hide.' : 'Pending...'}
-        </button>
+        </button> */}
         <br/>
         <p className="image"> 
        Click List to View On Screen in Data.
@@ -217,9 +233,7 @@ class App extends Component {
         Articles: {names}
         <br/>
          <p>{description}</p>
-         <img onError={this.addDefaultSrc} src={pictureBelow} />
-
-      
+         <img onError={this.addDefaultSrc} src={pictureBelow}  style={{marginLeft:10}}/>
         </div>
       </div>
     );

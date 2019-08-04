@@ -8,7 +8,7 @@ const list ="Photos:"
  */
 function ShopList(props) {
   return (
-    <div style= {{margin:5, paddingLeft:50, float:'left',backgroundColor:'#ffffff', color:'teal'}}>
+    <div style= {{margin:5, paddingLeft:50, float:'left',backgroundColor:'#ffffff'}}>
        <br/>
        {list}
        <br/>
