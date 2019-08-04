@@ -4,11 +4,12 @@
  -----------------------------------------
  Getting backend api images.
  -----------------------------------------
- TODO:
- refactor.
+##### TODO:
+##### refactor.
 
+## Fork it or Clone it. 
 
-‘’’
+——————————————-
 Don’t forget to:
 (Remove)
 rm node_modules
@@ -22,4 +23,5 @@ Or
 NPM 🏃🏻‍♀️ start
 
 
-‘’’
+__________________
+
