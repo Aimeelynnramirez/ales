@@ -167,8 +167,8 @@ componentWillUpdate(selectedBox) {
     const getImageApi1 = this.state.imageApi1
     const getImageApi2 = this.state.imageApi2
     const getImageApi3 = this.state.imageApi3
-    const getImageApi4 = this.state.imageApi1
-    const getImageApi5 = this.state.imageApi2
+    const getImageApi4 = this.state.imageApi4
+    const getImageApi5 = this.state.imageApi5
     const getImagesInBox = [getImageApi, getImageApi1, getImageApi2, getImageApi3, getImageApi4, getImageApi5];
     //this calls the length.
    // const box =  this.state.box
