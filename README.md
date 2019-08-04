@@ -6,3 +6,20 @@
  -----------------------------------------
  TODO:
  refactor.
+
+
+‘’’
+Don’t forget to:
+(Remove)
+rm node_modules
+
+NPM install
+
+NPM build 
+
+Or 
+
+NPM 🏃🏻‍♀️ start
+
+
+‘’’
