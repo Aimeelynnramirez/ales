@@ -1,6 +1,6 @@
 # ales
  ### Backend: https://aim-application.herokuapp.com/  @credit:GA
- ### Frontend: https://aimeelynnramirez.github.io/evaluating-number/  @ReactJS and Webpack
+ ### Frontend: https://aimeelynnramirez.github.io/ales  @ReactJS and Webpack
  -----------------------------------------
  Getting backend api images.
  -----------------------------------------
